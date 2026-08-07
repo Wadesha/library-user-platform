@@ -1,8 +1,6 @@
 # 🌐 GitHub Pages 在线演示
 
-**https://[你的用户名].github.io/library-user-platform/**
-
-> 请 fork 本仓库并启用 GitHub Pages（Settings → Pages → Source 选择 main 分支根目录），部署后替换上方链接。
+**https://wadesha.github.io/library-user-platform/**
 
 ---
 
@@ -24,10 +22,10 @@
 
 | 入口 | 说明 |
 |------|------|
-| [🏠 项目首页](https://[你的用户名].github.io/library-user-platform/) | 展示页，含核心指标、痛点、入口 |
-| [🧭 运营工作台](https://[你的用户名].github.io/library-user-platform/product-ops/) | **v2 视角**：软件运营者能做什么 |
-| [🏪 数据交易市场](https://[你的用户名].github.io/library-user-platform/data-market/) | 数据产品交易模拟平台 |
-| [📖 管理后台原型](https://[你的用户名].github.io/library-user-platform/v1-library-admin/) | v1 视角：面向图书馆管理者的后台 |
+| [🏠 项目首页](https://wadesha.github.io/library-user-platform/) | 展示页，含核心指标、痛点、入口 |
+| [🧭 运营工作台](https://wadesha.github.io/library-user-platform/product-ops/) | **v2 视角**：软件运营者能做什么 |
+| [🏪 数据交易市场](https://wadesha.github.io/library-user-platform/data-market/) | 数据产品交易模拟平台 |
+| [📖 管理后台原型](https://wadesha.github.io/library-user-platform/v1-library-admin/) | v1 视角：面向图书馆管理者的后台 |
 
 ## 📁 项目结构
 
