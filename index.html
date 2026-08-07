@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>图书馆用户洞察研究项目 · 展示页</title>
+<style>
+:root{--bg:#f6f7f4;--surface:#fff;--ink:#1f2933;--muted:#6b7280;--line:#e5e7eb;--brand:#1f6f54;--accent:#ea7d2c;--radius:16px;--shadow:0 1px 3px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.05);}
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.hero{background:linear-gradient(135deg,#1f6f54 0%,#2c8f6e 100%);color:#fff;padding:80px 24px 100px;text-align:center}
+.hero h1{font-size:40px;margin:0 0 12px;font-weight:800}
+.hero p{font-size:18px;opacity:.95;margin:0 auto 24px;max-width:640px}
+.hero .cta{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.hero .btn{background:#fff;color:var(--brand);padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:.15s}
+.hero .btn.secondary{background:rgba(255,255,255,.15);color:#fff}
+.hero .btn:hover{transform:translateY(-2px)}
+.container{max-width:1120px;margin:0 auto;padding:32px 20px 60px}
+.section{margin-bottom:48px}
+.section h2{font-size:26px;margin:0 0 8px}
+.section .muted{color:var(--muted);margin:0 0 24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{font-size:14px;color:#334155;margin:0}
+.card .stat{font-size:32px;font-weight:800;color:var(--brand);margin:8px 0 2px}
+.card .stat.accent{color:var(--accent)}
+.entry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.entry{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:.15s}
+.entry:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(16,24,40,.12)}
+.entry .icon{font-size:32px;margin-bottom:10px}
+.entry h3{margin:0 0 8px;font-size:18px;color:var(--brand)}
+.entry p{font-size:14px;color:var(--muted);margin:0}
+.pain-list{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.pain-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.pain-item:last-child{border-bottom:none}
+.pain-name{flex:1;font-weight:600}
+.pain-bar{flex:2;height:18px;background:#f1f5f9;border-radius:6px;overflow:hidden}
+.pain-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;color:#fff;font-size:11px;font-weight:700}
+.pain-pct{width:42px;text-align:right;font-size:13px;color:var(--muted)}
+.persona-chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;box-shadow:var(--shadow)}
+.privacy-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.privacy-box h3{color:var(--brand);margin:0 0 10px}
+.privacy-box ul{margin:0;padding-left:18px;font-size:14px;color:#334155}
+.privacy-box li{margin-bottom:6px}
+.footer{text-align:center;padding:32px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.warn{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px;margin-bottom:24px;font-size:14px;color:#92400e}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>图书馆用户洞察研究项目</h1>
+  <p>用数据读懂走进同一扇门的人。基于用户研究、运营洞察与数据交易模拟的完整方案演示。</p>
+  <div class="cta">
+    <a class="btn" href="./product-ops/">进入运营工作台</a>
+    <a class="btn secondary" href="./data-market/">浏览数据市场</a>
+    <a class="btn secondary" href="./v1-library-admin/">查看管理后台原型</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="warn">
+    <strong>⚠️ 声明：</strong>本页面所有数据均为<strong>模拟数据</strong>，用于方案演示。不包含任何真实用户信息，不涉及真实交易。
+  </div>
+
+  <!-- 核心指标 -->
+  <section class="section">
+    <h2>项目核心指标</h2>
+    <p class="muted">从用户研究到数据流通的模拟成果速览。</p>
+    <div class="cards">
+      <div class="card"><h3>调研样本</h3><div class="stat">7,314</div><p>覆盖 7 类用户群体</p></div>
+      <div class="card"><h3>痛点识别</h3><div class="stat accent">40%</div><p>数据库权限问题占比最高</p></div>
+      <div class="card"><h3>数据产品</h3><div class="stat">28</div><p>在架可交易数据产品</p></div>
+      <div class="card"><h3>模拟交易额</h3><div class="stat accent">¥1,247万</div><p>累计交易流水</p></div>
+    </div>
+  </section>
+
+  <!-- 用户画像 -->
+  <section class="section">
+    <h2>七类用户画像</h2>
+    <p class="muted">图书馆不是一类人的场所，而是七类人的目的地。点击上方「运营工作台」查看每类用户的详细需求。</p>
+    <div class="persona-chips">
+      <span class="chip">🔬 研究型 18%</span>
+      <span class="chip">📚 学习型 32%</span>
+      <span class="chip">🛋️ 休闲型 15%</span>
+      <span class="chip">📸 体验型 10%</span>
+      <span class="chip">🧭 情报型 8%</span>
+      <span class="chip">🤝 合作型 12%</span>
+      <span class="chip">♿ 特需型 5%</span>
+    </div>
+  </section>
+
+  <!-- 痛点分布 -->
+  <section class="section">
+    <h2>用户痛点分布（TOP 6）</h2>
+    <p class="muted">高频问题不仅是改进机会，更是数据产品的来源。</p>
+    <div class="pain-list" id="pain-list"></div>
+  </section>
+
+  <!-- 三个子平台入口 -->
+  <section class="section">
+    <h2>三个可交互原型</h2>
+    <p class="muted">从不同视角探索同一个问题：如何更好地服务图书馆用户。</p>
+    <div class="entry-grid">
+      <a class="entry" href="./product-ops/">
+        <div class="icon">🧭</div>
+        <h3>运营工作台（v2 视角）</h3>
+        <p>面向软件运营者：把"无能为力"的痛点，翻译成四类可执行杠杆。</p>
+      </a>
+      <a class="entry" href="./data-market/">
+        <div class="icon">🏪</div>
+        <h3>数据交易市场</h3>
+        <p>模拟数据产品定价、交易、隐私保护与合规流通的演示平台。</p>
+      </a>
+      <a class="entry" href="./v1-library-admin/">
+        <div class="icon">📖</div>
+        <h3>管理后台（v1 视角）</h3>
+        <p>面向图书馆管理者的用户研究与服务平台原型。</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- 隐私保护 -->
+  <section class="section">
+    <h2>隐私与数据安全</h2>
+    <div class="privacy-box">
+      <h3>我们如何承诺保护数据</h3>
+      <ul>
+        <li>所有展示数据均为<strong>虚构模拟</strong>，不关联任何真实个体。</li>
+        <li>真实采集数据需获得用户<strong>知情同意</strong>，并明确授权范围。</li>
+        <li>数据产品交易前经过<strong>匿名化与聚合脱敏</strong>处理，符合 k-anonymity 标准。</li>
+        <li>平台通过第三方<strong>合规审计</strong>，禁止数据二次转售或歧视性画像。</li>
+        <li>数据产品设有<strong>有效期与销毁机制</strong>，超期需重新授权。</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <div>图书馆用户洞察研究项目 · 原型演示</div>
+  <div style="margin-top:4px">原始数据、隐私数据与真实用户信息在确认合规前不会上传</div>
+</footer>
+
+<script>
+const pains = [
+  { name: "数据库访问与权限", pct: 40, color: "#dc2626" },
+  { name: "空间管理与噪音", pct: 27, color: "#ea580c" },
+  { name: "占座治理", pct: 18, color: "#d97706" },
+  { name: "设施维护", pct: 12, color: "#ca8a04" },
+  { name: "校友 / 校外服务", pct: 10, color: "#0891b2" },
+  { name: "资源建设", pct: 8, color: "#65a30d" }
+];
+document.getElementById("pain-list").innerHTML = pains.map(p => `
+  <div class="pain-item">
+    <div class="pain-name">${p.name}</div>
+    <div class="pain-bar"><div class="pain-fill" style="width:${p.pct}%;background:${p.color}">${p.pct}%</div></div>
+    <div class="pain-pct">${p.count || ''}</div>
+  </div>`).join('');
+</script>
+
+</body>
+</html>
