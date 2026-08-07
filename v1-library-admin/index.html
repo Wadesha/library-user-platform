@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>图书馆用户研究与服务平台 · 原型</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- 顶部栏 -->
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">📖</span>
+    <div>
+      <div class="brand-title" id="meta-title">图书馆用户研究与服务平台</div>
+      <div class="brand-sub" id="meta-sub">用数据读懂走进同一扇门的七群人</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span class="pill" id="meta-sample">样本 7,314</span>
+    <span class="pill ghost" id="meta-updated">2026-08</span>
+  </div>
+</header>
+
+<!-- 导航 -->
+<nav class="nav" id="nav">
+  <button class="nav-btn active" data-view="overview">概览</button>
+  <button class="nav-btn" data-view="personas">用户画像</button>
+  <button class="nav-btn" data-view="insights">需求洞察</button>
+  <button class="nav-btn" data-view="painmap">痛点地图</button>
+  <button class="nav-btn" data-view="methods">调研方法</button>
+  <button class="nav-btn" data-view="collab">协作空间</button>
+  <button class="nav-btn" data-view="roadmap">建设规划</button>
+</nav>
+
+<main class="container">
+
+  <!-- ============ 概览 ============ -->
+  <section class="view active" id="view-overview">
+    <div class="section-head">
+      <h2>概览仪表盘</h2>
+      <p class="muted">从宏观指标到趋势曲线，一眼看清这群"走进同一扇门的人"。</p>
+    </div>
+    <div class="kpi-grid" id="kpi-grid"></div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>近 6 季度满意度与反馈量</h3>
+        <svg id="trend-chart" viewBox="0 0 520 260" class="chart"></svg>
+        <div class="legend">
+          <span><i class="dot" style="background:#0891b2"></i>满意度(%)</span>
+          <span><i class="dot" style="background:#ea580c"></i>反馈条数</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>七类用户构成</h3>
+        <svg id="donut-chart" viewBox="0 0 260 260" class="chart"></svg>
+        <div class="legend" id="donut-legend"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 用户画像 ============ -->
+  <section class="view" id="view-personas">
+    <div class="section-head">
+      <h2>用户画像</h2>
+      <p class="muted">同一空间，七种目的地。点击卡片查看详情与需求雷达。</p>
+    </div>
+    <div class="persona-grid" id="persona-grid"></div>
+    <div class="card persona-detail" id="persona-detail"></div>
+  </section>
+
+  <!-- ============ 需求洞察 ============ -->
+  <section class="view" id="view-insights">
+    <div class="section-head">
+      <h2>需求洞察 · 雷达</h2>
+      <p class="muted">不同用户在七个需求维度上的强度差异，是精准服务设计的依据。</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>需求雷达（点击切换用户）</h3>
+        <svg id="radar-chart" viewBox="0 0 360 360" class="chart"></svg>
+        <div class="radar-switch" id="radar-switch"></div>
+      </div>
+      <div class="card">
+        <h3>维度说明</h3>
+        <ul class="axis-list" id="axis-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 痛点地图 ============ -->
+  <section class="view" id="view-painmap">
+    <div class="section-head">
+      <h2>痛点地图</h2>
+      <p class="muted">最大的不满，往往藏在最基础的地方。以下是反馈高频问题分布。</p>
+    </div>
+    <div class="card">
+      <h3>痛点分布（多选项，按比例）</h3>
+      <div id="pain-bars"></div>
+    </div>
+    <div class="card">
+      <h3>空间使用热力图 · 拥挤度</h3>
+      <p class="muted">颜色越深越拥挤，用于优化空间布局与开放策略。</p>
+      <div id="heatmap"></div>
+    </div>
+  </section>
+
+  <!-- ============ 调研方法 ============ -->
+  <section class="view" id="view-methods">
+    <div class="section-head">
+      <h2>调研方法工具箱</h2>
+      <p class="muted">定量回答"有多少"，定性回答"为什么"，创新方法回答"还能怎样"。</p>
+    </div>
+    <div class="method-grid" id="method-grid"></div>
+    <div class="card">
+      <h3>问卷维度框架（可直接复用）</h3>
+      <div class="survey-frame" id="survey-frame"></div>
+    </div>
+  </section>
+
+  <!-- ============ 协作空间 ============ -->
+  <section class="view" id="view-collab">
+    <div class="section-head">
+      <h2>协作空间与知识共建</h2>
+      <p class="muted">被低估的蓝海：从"一个人的书房"到"一群人的客厅"。</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>协作需求五层</h3>
+        <div id="collab-layers"></div>
+      </div>
+      <div class="card">
+        <h3>讨论间预约看板（本周模拟）</h3>
+        <div id="room-board"></div>
+        <div class="legend">
+          <span><i class="dot" style="background:#65a30d"></i>空闲</span>
+          <span><i class="dot" style="background:#d97706"></i>紧张</span>
+          <span><i class="dot" style="background:#dc2626"></i>约满</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 建设规划 ============ -->
+  <section class="view" id="view-roadmap">
+    <div class="section-head">
+      <h2>建设规划与成功指标</h2>
+      <p class="muted">分阶段推进，从基础摸底到共创验证，再到持续进化。</p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+    <div class="card">
+      <h3>目标与关键结果（OKR 视角）</h3>
+      <div id="metrics-table"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>原型演示 · 数据为基于公开研究的合理模拟，非真实统计值</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
